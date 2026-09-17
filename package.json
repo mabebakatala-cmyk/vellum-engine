@@ -1,0 +1,44 @@
+{
+  "name": "vellum-pdf-engine",
+  "version": "0.1.0",
+  "description": "Local PDF processing engine and CLI (merge, split, watermark, PDF/A, accessibility, signatures...) — no network calls, ever. Same code as vellumpdf.ch.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Edem Dogbe <hello@dogbemultisystem.ch>",
+  "homepage": "https://vellumpdf.ch",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edogbe/vellum-engine.git"
+  },
+  "bin": {
+    "vellum-pdf": "./bin/vellum-pdf.mjs"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "assets",
+    "LICENSE",
+    "README.md",
+    "README.fr.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "pretest": "npm run build",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.6",
+    "asn1js": "^3.0.10",
+    "jszip": "^3.10.1",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.2.108",
+    "pkijs": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "typescript": "~6.0.2"
+  }
+}

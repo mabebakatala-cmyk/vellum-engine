@@ -1,0 +1,5 @@
+Ce dossier contient qpdf compilé en WebAssembly (qpdf.js, qpdf.mjs,
+qpdf.wasm), vendu tel quel depuis le projet QPDF (https://qpdf.sourceforge.io/),
+distribué sous licence Apache License 2.0. Ces binaires ne sont pas couverts
+par la licence MIT de vellum-pdf-engine ; voir
+https://github.com/qpdf/qpdf/blob/main/LICENSE.txt
