@@ -8,7 +8,7 @@
   "homepage": "https://vellumpdf.ch",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edogbe/vellum-engine.git"
+    "url": "git+https://github.com/mabebakatala-cmyk/vellum-engine.git"
   },
   "bin": {
     "vellum-pdf": "./bin/vellum-pdf.mjs"
