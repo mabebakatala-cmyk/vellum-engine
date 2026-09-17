@@ -48,7 +48,7 @@ import type { PDFDict, PDFDocument } from 'pdf-lib'
 // par Node (scripts/validate-pdfa.mjs), qui — contrairement à Vite — ne
 // résout pas les spécificateurs relatifs sans extension.
 import { chargerPdfLib } from './bibliotheques.ts'
-import { loadPdf, savePdf } from './pdf.ts'
+import { loadPdf } from './pdf.ts'
 import { generateSrgbIccProfile } from './srgbIcc.ts'
 
 /**
@@ -331,7 +331,10 @@ export async function convertToPdfA(bytes: Uint8Array): Promise<{
     modifyDate,
   })
 
-  return { bytes: await savePdf(doc), report }
+  // updateMetadata: false — sinon pdf-lib remplace à l'enregistrement le
+  // Producer et la date de modification posés ci-dessus, et le XMP ne
+  // correspond plus au dictionnaire /Info (constaté le 17.09.2026).
+  return { bytes: await doc.save({ useObjectStreams: true, updateMetadata: false }), report }
 }
 
 // ---------------------------------------------------------------------------
