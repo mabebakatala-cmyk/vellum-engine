@@ -17,8 +17,15 @@ et adaptés pour Node depuis cette source privée, jamais édités à la main
 
 ## Installation
 
-Le paquet n'est pas encore publié sur le registre npm. Installez-le depuis ce
-dépôt :
+```bash
+npm i -g vellum-pdf-engine
+```
+
+Node 20 ou plus récent suffit. Rien d'autre : les pièces WebAssembly (le
+chiffrement PDF via qpdf) et le profil colorimétrique PDF/A sont fournis dans
+le paquet, si bien que rien n'est téléchargé à l'exécution.
+
+Pour travailler depuis les sources :
 
 ```bash
 git clone https://github.com/mabebakatala-cmyk/vellum-engine.git
@@ -27,15 +34,6 @@ npm install
 npm run build
 npm link          # met `vellum-pdf` dans votre PATH
 ```
-
-Node 20 ou plus récent suffit. Rien d'autre : les pièces WebAssembly (le
-chiffrement PDF via qpdf) et le profil colorimétrique PDF/A sont fournis dans
-le dépôt, si bien que la construction ne fait aucun appel réseau au-delà de
-`npm install`.
-
-Quand le paquet sera publié, `npm i -g vellum-pdf-engine` deviendra le chemin
-court. D'ici là, la commande ci-dessus est la seule qui fonctionne, et ce
-fichier le dit plutôt que de promettre une installation qui échoue.
 
 ## Commandes
 
