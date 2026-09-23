@@ -11,7 +11,7 @@
     "url": "git+https://github.com/mabebakatala-cmyk/vellum-engine.git"
   },
   "bin": {
-    "vellum-pdf": "./bin/vellum-pdf.mjs"
+    "vellum-pdf": "bin/vellum-pdf.mjs"
   },
   "files": [
     "dist",
