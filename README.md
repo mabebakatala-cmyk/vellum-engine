@@ -16,12 +16,23 @@ adapted for Node from that private source, never edited by hand (see
 
 ## Install
 
+The package is not on the npm registry yet. Install it from this repository:
+
 ```bash
-npm i -g vellum-pdf-engine
+git clone https://github.com/mabebakatala-cmyk/vellum-engine.git
+cd vellum-engine
+npm install
+npm run build
+npm link          # puts `vellum-pdf` on your PATH
 ```
 
 Node 20 or later. Nothing else — the WebAssembly pieces (PDF encryption via
-qpdf) and the PDF/A colour profile are bundled in the package.
+qpdf) and the PDF/A colour profile are bundled in the repository, so the build
+makes no network call beyond `npm install`.
+
+Once the package is published, `npm i -g vellum-pdf-engine` will be the short
+way in. Until then, the command above is the only one that works, and this
+README says so rather than promising an install that fails.
 
 ## Commands
 
