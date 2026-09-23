@@ -4,7 +4,7 @@
   "description": "Local PDF processing engine and CLI (merge, split, watermark, PDF/A, accessibility, signatures...) — no network calls, ever. Same code as vellumpdf.ch.",
   "type": "module",
   "license": "MIT",
-  "author": "Edem Dogbe <hello@dogbemultisystem.ch>",
+  "author": "Edem Dogbe <contact@vellumpdf.ch>",
   "homepage": "https://vellumpdf.ch",
   "repository": {
     "type": "git",
